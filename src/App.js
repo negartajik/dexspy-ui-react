@@ -1,10 +1,13 @@
-import './App.css';
-import Sidebar from './layout/Sidebar';
+import "./App.css";
+import AppRoutes from "./config/AppRoutes";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
-    <div className='app'>
-      <Sidebar/>
+    <div className="app">
+      <MainLayout>
+        <AppRoutes />
+      </MainLayout>
     </div>
   );
 }
