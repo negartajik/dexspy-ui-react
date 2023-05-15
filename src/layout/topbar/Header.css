@@ -1,0 +1,12 @@
+.header{
+    @apply flex flex-row h-10 w-screen justify-between lg:justify-end
+}
+.burger-logo{
+    @apply dark:text-white lg:hidden
+}
+.header-logo{
+    @apply lg:hidden
+}
+.search-logo{
+    @apply dark:text-white
+}

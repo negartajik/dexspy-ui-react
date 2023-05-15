@@ -4,7 +4,7 @@ import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
-    <div className="app">
+    <div className="font-body">
       <MainLayout>
         <AppRoutes />
       </MainLayout>

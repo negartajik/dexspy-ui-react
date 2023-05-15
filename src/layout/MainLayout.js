@@ -1,17 +1,30 @@
-import React from "react";
-import Sidebar from "../layout/sidebar/Sidebar";
+import React, { useState } from "react";
+import { Header, Sidebar } from "../layout";
+import { menuItems } from "./sidebar/MenuItems";
+import "./MainLayout.css";
 
 const MainLayout = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = (open) => {
+    console.log("sidebar");
+    setIsOpen(open);
+  };
   return (
     <div className="flex flex-row h-screen">
-      <div className="w-20 h-full bg-gray-200">
-        <Sidebar />
-      </div>
-      <div className="flex flex-col flex-grow">
-        <div className=" bg-gray-700">
-          <nav className=" h-16" />
-        </div>
-        <main className="flex-grow bg-gray-100 p-4">{props.children}</main>
+      <Sidebar
+        isOpen={isOpen}
+        toggleSidebar={toggleSidebar}
+        show={true}
+        items={menuItems}
+        mobileScreenMaxSize={1000}
+      />
+      <div className={` ${isOpen ? "max-xl:hidden" : ""} header-and-contents`}>
+        <Header isOpen={isOpen} clicked={toggleSidebar} />
+
+        <main className="flex-grow bg-gray-100">
+          <div className="px-4 sm:px-6 lg:px-8 3xl:px-10">{props.children}</div>
+        </main>
       </div>
     </div>
   );

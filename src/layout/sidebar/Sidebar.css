@@ -1,0 +1,6 @@
+.sidebar-close{
+    @apply hidden lg:flex
+}
+.sidebar-onlyicon, .sidebar-open{
+    @apply visible max-lg:z-40 max-lg:h-screen max-lg:w-screen max-lg:content-center
+}

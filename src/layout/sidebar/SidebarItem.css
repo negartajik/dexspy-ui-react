@@ -1,0 +1,23 @@
+.sidebar-item-close, .sidebar-item-icon-close{
+    @apply hidden lg:block
+}
+.sidebar-item-title-close{
+    @apply hidden
+}
+.sidebar-item-open, .sidebar-item-icon-open, .sidebar-item-title-open, .sidebar-item-onlyicon, .sidebar-item-icon-onlyicon{
+    display: block;
+}
+
+.sidebar-item-icon {
+    @apply relative flex h-12 items-center whitespace-nowrap rounded-lg px-4 text-sm text-gray-500
+}
+
+.sidebar-item-parts-margin{
+    @apply px-3 pb-5 2xl:px-3
+}
+
+.sidebar-item-icon-margin{
+    @apply mb-2 min-h-[48px] list-none last:mb-0
+}
+
+
